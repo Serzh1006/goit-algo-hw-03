@@ -26,7 +26,6 @@ def display_tree(path, destination_dir="dist", ) -> None:
             display_tree(child, destination_dir)
 
 def main():
-    print(sys.argv)
     if len(sys.argv)<2:
         print("Введіть хоча б один аргумент. Не знайдено шлях до директорії")
         sys.exit(1)
@@ -48,6 +47,7 @@ def main():
         return
 
     # Виклик функції
+    print("\nОчікуйте! Файли копіюються...")
     result = display_tree(source_dir,destination_dir)
     if result != False:
         print("Дані скопійовано успішно!")
